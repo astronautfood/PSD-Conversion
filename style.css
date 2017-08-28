@@ -1,0 +1,884 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+/*=============================================
+=            General CSS                     =
+=============================================*/
+
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1 {
+	font-size: 70px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	letter-spacing: 20px;
+}
+
+.logo h2 {
+	font-size: 30px;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 6px;
+}
+
+h2 {
+	font-size: 36px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 0;
+}
+
+h3 {
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h4 {
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+li {
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	color: #1e1e1e;
+}
+
+/*=============================================
+=              Index.html                    =
+=============================================*/
+
+/*=============================================
+=                 Header                     =
+=============================================*/
+
+
+.hero {
+	background-image: url(assets/home_page/hero.jpg);
+	background-size: cover;
+	background-position-x: center; 
+	height: 100vh;
+
+}
+
+.logo {
+	float: left;
+	padding-top: 40px;
+}
+
+header ul {
+	float: right;
+	padding: 45px 0 0 20px;
+
+}
+
+header ul li {
+	float: left;
+	letter-spacing: 3px;
+	min-width: 60px;
+	margin: 0 25px;
+	position: relative;
+}
+
+header li:after {
+	content: "\25CF";
+	font-size: 12px;
+	position: absolute;
+	left: 80px;
+	top: 0;
+}
+
+header li:last-child:after {
+	content: "";
+}
+
+.hero h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 1170px;
+}
+
+h1 > span {
+	display: block;
+}
+
+/*=============================================
+=                  About                     =
+=============================================*/
+
+.about h2 {
+	margin: 140px 0 50px;
+}
+
+.about span {
+	display: block;
+}
+
+.about h2,
+.about span {
+	text-align: center;
+}
+
+.img_background {
+	display: inline-block;
+	height: 290px;
+	background: #ffd96d;
+	width: 310px;
+	height: 290px;
+	left: 50%;
+	transform: translateX(-50%);
+	position: relative;
+}
+
+.img_background img {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	transform: scale(1.2);
+	position: absolute;
+	top: 20px;
+}
+
+.about p,
+.services p {
+	font-family: 'Droid Serif', serif;
+	font-style: normal;
+	text-align: center;
+	color: #afafaf;
+	margin: 50px 0 100px;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+/*=============================================
+=                  Skills                     =
+=============================================*/
+
+section.skills {
+	background: #f3f3f3;
+}
+
+.skills .box {
+	width: 270px;
+	float: left;
+	background: #fff;
+	margin: 100px 15px;
+}
+
+.skills .photoshop {
+	margin: 100px 15px 100px 0;
+}
+
+.skills .html5 {
+	margin: 100px 0 100px 15px;
+}
+
+.skills h3,
+.skills h4 {
+	text-align: center;
+}
+
+.skills h3 {
+	letter-spacing: 3px;
+}
+
+.skills h4 {
+	margin-bottom: 70px;
+	position: relative;
+}
+
+.skills h4::after {
+	content: "";
+	display: block;
+	width: 50px;
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom: 3px solid #1e1e1e;
+}
+
+.skills img {
+	margin: 0 30px;
+}
+
+/*=============================================
+=                  Services                     =
+=============================================*/
+
+.services h2 {
+	margin-top: 140px;
+}
+
+.services h2, 
+.italic {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.italic {
+	font-family: 'Droid Serif', serif;
+	font-style: italic;
+	text-transform: capitalize;
+	position: relative;
+}
+
+.italic:after {
+	content: " ";
+	display: block;
+	width: 50px;
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-bottom: 3px solid #1e1e1e;
+}
+
+.services .box {
+	width: 570px;
+	float: left;
+}
+
+.services .box:nth-of-type(3) {
+	clear: both;
+}
+
+.branding,
+.web {
+	margin-top: 80px;
+}
+
+.services img {
+	float: left;
+	margin-right: 30px;
+}
+
+.services span {
+	display: block;
+}
+
+.services h3 {
+	padding-bottom: 55px;
+	margin: 0;
+	position: relative;
+	letter-spacing: 3px;
+}
+
+.services h3:after {
+	content: " ";
+	display: block;
+	width: 50px;
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	border-bottom: 3px solid #1e1e1e;
+}
+
+.services h4 {
+	letter-spacing: 0.5px;
+}
+
+.services p {
+	text-align: left;
+	padding-left: 100px;
+	margin: 0;
+}
+
+.services a {
+	padding: 0 0 80px 100px;
+}
+
+.services a span {
+	display: inline-block;
+	padding-right: 12px;
+	letter-spacing: 3px;
+}
+
+/*=============================================
+=                  Facts                     =
+=============================================*/
+
+.facts {
+	background-image: url(assets/home_page/facts-bg.jpg);
+	background-size: cover;
+	height: 600px;
+}
+
+h2.title {
+	padding-top: 130px;
+}
+
+.facts h4.italic {
+	text-align: left;
+	margin-bottom: 100px;
+	letter-spacing: 0.5px;
+}
+
+.facts h4.italic:after {
+	left: 25px;
+}
+
+.facts .facts__info h2 {
+	padding: 0;
+	margin: 0;
+}
+
+.facts__info h4 {
+	margin: 0 0 50px;
+}
+
+.facts__info {
+	width: 585px;
+}
+
+.project_finished,
+.website_released,
+.logo_designed,
+.song_listed,
+.movie_watched {
+	float: left;
+	width: 195px;
+}
+
+/*=============================================
+=                  Contact                    =
+=============================================*/
+
+#contact h2 {
+	margin: 150px 0 10px;
+}
+
+#contact h2,
+#contact h4 {
+	text-align: center;
+}
+
+#contact h4 {
+	margin: 0 0 85px;
+	letter-spacing: 0.5px;
+	text-transform: none;
+}
+
+.phone_number {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	font-size: 70px;
+	color: #92fcf9;
+	letter-spacing: 12px;
+	text-align: center;
+}
+
+.address,
+.email {
+	font-family: 'Montserrat', sans-serif;
+	color:  #1e1e1e;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	transform: scaleY(1);
+	margin: 0;
+	letter-spacing: 3px;
+}
+
+.email {
+	margin-bottom: 80px;
+}
+
+.contact__form {
+	border: none;
+	border-bottom: 1px solid #afafaf;
+	width: 373px;
+	outline: none;
+    display: block;
+    padding: 7px;
+    background: transparent;
+    margin-bottom: 10px;
+    float: left;
+ }
+
+#name,
+#email {
+	margin-right: 25px;
+}
+
+#message {
+	width: 100%;
+	margin-top: 50px;
+}
+
+#name,
+#email,
+#subject,
+#message,
+#submit {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-left: 0;
+	letter-spacing: 2px;
+}
+
+::-webkit-input-placeholder { 
+  color: #1e1e1e;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #1e1e1e;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #1e1e1e;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #1e1e1e;
+  opacity: 1;
+}
+
+#submit {
+	margin: 50px 0 140px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 15px 80px;
+	color: #fff;
+	background: #1e1e1e;
+	border: none;
+	letter-spacing: 3px;
+}
+
+/*=============================================
+=                  Footer                    =
+=============================================*/
+
+footer {
+	background: #ffd96d;
+	max-width: 100%; 
+}
+
+footer h2 {
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 15px;
+	padding-top: 50px
+
+}
+
+.social ul {
+	margin: 0 auto;
+	text-align: center;
+} 
+
+.social ul li {
+	display: inline-block;
+	margin: 0 18px 20px;
+	letter-spacing: 3px;
+	font-weight: 500;
+	position: relative;
+	
+}
+
+.social li:after {
+	content: "\25CF";
+	font-size: 12px;
+	position: absolute;
+	left: 110px;
+	top: 0;
+}
+
+/*THERE'S NO OTHER WAY!*/
+
+.social li:first-child::after {
+	left: 120px;
+}
+
+.social li:nth-of-type(2)::after {
+	left: 100px;
+}
+
+.social li:last-child:after {
+	content: "";
+}
+
+.copyright p {
+	clear: both;
+	margin: 0;
+	padding-bottom: 50px;
+	font-family: 'Droid Serif', serif;
+	font-style: italic;
+	text-transform: capitalize;
+	font-size: 14px;
+	text-align: center;
+	color: #1e1e1e;
+}
+
+/*=============================================
+=               PAGE TWO/WORK.HTML          =
+=============================================*/
+
+/*=============================================
+=                  Header                    =
+=============================================*/
+
+.work__logo {
+	float: left;
+	padding-top: 40px;
+}
+
+h1.work__h1 {
+	clear: both;
+	padding-top: 180px;
+	color: #1e1e1e;
+	font-size: 36px;
+	letter-spacing: 7px;
+}
+
+h1.work__h1 > span {
+	display: block;
+}
+
+.work h4 {
+	clear: both;
+	text-align: center;
+	font-family: 'Droid Serif', serif;
+	font-style: italic;
+	text-transform: capitalize;
+	letter-spacing: 0.5px;
+	margin-bottom: 50px;
+}
+
+.work__background {
+	background-image: url(assets/work_page/project-hero.jpg);
+	background-size: cover;
+	height: 800px;
+	margin-bottom: 90px;
+}
+
+/*=============================================
+=             Main/Description               =
+=============================================*/
+
+.inner__wrapper {
+	width: 770px;
+	float: left;
+}
+
+.description h2 {
+	font-size: 24px;
+	margin-bottom: 50px;
+	letter-spacing: 3px;
+}
+
+.light__font p,
+.dark__font p {
+	font-family: 'Droid Serif', serif;
+	font-size: 14px;
+	line-height: 24px;
+	font-style: normal;
+}
+
+.light__font p {
+	color: #afafaf;
+}
+
+.dark__font p {
+	font-weight: 700;
+	color: #1e1e1e;
+	font-style: italic;
+	margin-bottom: 35px;
+}
+
+.last {
+	margin: 35px 0 340px;
+}
+
+/*=============================================
+=                     Aside                  =
+=============================================*/
+
+aside {
+	float: right;
+	width: 300px;
+}
+
+.client h4, 
+.date h4,
+.what__we__did h4,
+.tools h4,
+.category h4,
+.share h4 {
+	margin: 40px 0 15px;
+}
+
+.client p {
+	font-family: 'Droid Serif', serif;
+	font-size: 14px;
+	color: #afafaf;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+
+.date p,
+.category p {
+	font-family: 'Droid Serif', serif;
+	font-size: 14px;
+	color: #afafaf;
+	text-transform: capitalize;
+	margin-bottom: 40px;
+}
+
+.what__we__did ul li,
+.tools ul li,
+.category p {
+	list-style-type: none;
+	color: #afafaf;
+	font-family: 'Droid Serif', serif;
+	text-transform: capitalize;
+	line-height: 24px;
+}
+
+.what__we__did ul li span,
+.tools span {
+	color: #1e1e1e;
+	display: block;
+	margin-right: 5px;
+	float: left;
+}
+
+.button a {
+	padding: 20px 75px;
+	background: #92fcf9;
+	color: #fff;
+}
+
+.share h4 {
+	margin-bottom: 20px;
+}
+
+/*=============================================
+=              PAGE THREE/BLOG.HTML          =
+=============================================*/
+
+/*=============================================
+=                     Header                 =
+=============================================*/
+
+.blog {
+	background: url(assets/blog_page/Base.jpg);
+	height: 500px;
+}
+
+.blog__logo {
+	float: left;
+	padding-top: 40px;
+}
+
+.blog nav ul {
+	float: right;
+	padding: 45px 0 0 20px;
+}
+
+.blog nav ul li {
+	font-weight: 500;
+}
+
+.blog {
+	background-color: #92fcf9;
+	height: 500px;
+}
+
+.blog h1 {
+	margin: 0;
+	padding-top: 200px;
+	letter-spacing: 15px;
+}
+
+.blog h4 {
+	text-align: center;
+}
+
+/*=============================================
+=                   Main/Blog                =
+=============================================*/
+
+.main__blog h2,
+h4.blog__subtitle {
+	text-align: center;
+}
+
+.main__blog h2 {
+	margin: 140px 0 20px;
+}
+
+h4.blog__subtitle {
+	letter-spacing: 0.5px;
+}
+
+h3.blog__article {
+	text-align: center;
+	letter-spacing: 3px;
+	margin-top: 105px;
+	position: relative;
+}
+
+.post__container .fa {
+	float: left;
+}
+
+.blog__info {
+	float: left;
+	margin: 0 25px 0 10px;
+	font-size: 12px;
+	font-family: 'Droid Serif', serif;
+	text-transform: capitalize;
+	font-style: italic;
+}
+
+.post__container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.main__blog img{
+	display: block;
+	margin: 65px auto 35px;
+	max-width: 100%;
+}
+
+.main__blog p {
+	width: 750px;
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Droid Serif', serif;
+	color: #afafaf;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+h4.more {
+	text-align: center;
+	margin-bottom: 80px;
+	font-weight: 500;
+}
+
+h4.more::after {
+	content: "\25B6";
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+blockquote,
+.link {
+	border: 1px solid #1e1e1e;
+	margin-top: 80px;
+	background-image: url(assets/blog_page/swirl_pattern.png);
+    display: block;
+    max-width: 985px;
+    margin: 0 auto;
+}
+
+blockquote .wrapper ,
+.link .wrapper {
+	border: 20px solid #fff;
+}
+
+.main__blog blockquote img,
+.link img {
+	margin: 45px auto 25px;
+}
+
+
+p.blog__focal {
+font-family: 'Droid' serif;
+color: #1e1e1e;
+font-size: 24px;
+font-style: italic;
+line-height: 36px;
+text-align: center;
+width: 850px;
+}
+
+p.blog__focal span {
+	display: block;
+	margin: 20px 0 40px;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: 500;
+}
+
+.link p {
+	font-family: 'Montserrat', sans-serif;
+	color: #1e1e1e;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.older__post__button a {
+	padding: 20px 65px;
+	background: #1e1e1e;
+	color: #fff;
+	display: block;
+	margin: 80px auto 140px;
+	width: 230px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
